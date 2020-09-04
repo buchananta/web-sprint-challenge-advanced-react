@@ -29,15 +29,18 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
-    like a functional component, one a class that extends react.component, state and props go inside a constructor(). and isntead of changing state with hooks, one uses setState.
+    like a functional component, one a class that extends react.component, state and props go inside a constructor(). and isntead of changing state with hooks, one uses setState. also, there is a persistent presence of 'this'
 2. Describe the different phases of the component lifecycle.
     mounting when it's first rendered, updating whenever state changes, unmounting at the end when it is no longer rendered.
 3. Demonstrate an understanding of class component lifecycle methods.
-    you mean like componentdidmount componentdidupdate, componentwillunmount?
+    you mean like componentdidmount componentdidupdate, componentwillunmount? they just run at the end of each lifecycle stage. after the mount, after every update, and at the end after it unmounts.
+
 4. Define stateful logic.
-    according to the English language, it should be logic that acts on the state (so, in this case, it would be the bits that get rendered based on changes in state. But in programming we turn everything upside down, and so it's the logic/programming that alters state.
+    Grammatically I think it should be logic that changes based on the state. (Stateful: 'maintains or is dependent on the previous state of an application, process, etc. Contrasted with "stateless"') So, in this case, it would be the bits that do different things (for example, render) based on changes in state. HOWEVER, in programming we turn everything upside down, and so it's the logic or code that alters and updates state.
+
 5. Describe how to test a React component with React Testing Library.
-    import render from the testing-library/react or whatever the library is. render the component, then use help functions created to test different parts of it.
+    import render from the testing-library/react or whatever the library is. render the component, then use helper functions created to test different parts of it. Oh, and that all goes in a file with *.test.js naming scheme. And then do 'npm test' in the console.
+
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
@@ -74,7 +77,7 @@ _Please follow the setup instructions closely so that you can get everything up 
 **Starting your test runner**
 
 - [x] In the final terminal window, make sure you are in the `client` folder still
-- [ ] Start the test runner with `npm test` (I recommend doing this only when you're testing - any change in your app will make the tests run, and that could eat up your computer power)
+- [x] Start the test runner with `npm test` (I recommend doing this only when you're testing - any change in your app will make the tests run, and that could eat up your computer power)
 
 **Commit and Push OFTEN!**
 
@@ -101,14 +104,14 @@ Nothing needs to be done here. You _will_ have to navigate to the cart page in y
 
 The form is working, but it is currently controlled by local stateful logic. We want to control this form with a custom hook.
 
-- [ ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic
+- [x] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic
 
 _Note: You built a useForm hook in the guided project this week. You will probably need to use that as a guide to complete this step. However, try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
 
 #### Testing the Checkout Form
 
-- [ ] Build out the tests listed in `CheckoutForm.test.js`. You will need to make sure they are testing what the test title implies they are testing
-- [ ] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working
+- [x] Build out the tests listed in `CheckoutForm.test.js`. You will need to make sure they are testing what the test title implies they are testing
+- [x] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working
 
 <hr/>
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
